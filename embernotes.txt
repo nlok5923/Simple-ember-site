@@ -1,0 +1,40 @@
+routes:
+we would like the page to be served on the /about URL. In order
+to do this, we will need to tell Ember about our plan to add a page
+at that location. Otherwise, Ember will think we have visited an invalid URL!
+
+The map() method of your Ember application's router can be
+ invoked to define URL mappings. When calling map(), you
+ should pass a function that will be invoked with the value
+  this set to an object which you can use to create routes.
+Ex :
+Router.map(function() {
+  this.route('about', { path: '/about' });
+  this.route('favorites', { path: '/favs' });
+});
+
+Now, when the user visits /about, Ember will render the about
+template. Visiting /favs will render the favorites template.
+
+You can leave off the path if it is the same as the route name.
+ In this case, the following is equivalent to the above example
+
+Router.map(function() {
+  this.route('about');
+  this.route('favorites', { path: '/favs' });
+});
+
+inside our templates we can use
+<link To @route="routename">
+link to routename
+</linkTo>
+
+
+ex : Router.map(function() {
+  this.route('blog_post', { path: '/blog-post' });
+});
+
+now <linkTo @route="blog_post">dfdf<linkTo>
+route  template will be /blog-post
+template will be blog_post
+
