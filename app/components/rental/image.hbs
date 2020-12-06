@@ -1,0 +1,48 @@
+<div class="image">
+<img  ...attributes>
+{{!-- instead of using src and alt we will pass attributes when we will invoke the compoenent  --}}
+
+</div>
+{{!-- //this get run if the condition specified is true else it will not run as it is in  if condition  --}}
+{{!-- 
+{{#if this.isLarge}}
+  <div class="image large">
+  
+    <img ...attributes>
+    <small>View Smaller</small>
+  </div>
+{{else}}
+  <div class="image">
+    <img ...attributes>
+    <small>View Larger</small>
+  </div>
+{{/if}} --}}
+
+
+{{!-- {{#if this.isLarge}}
+
+   <button type="button" class="image large" {{on "click" this.toggleSize}}>
+    <img ...attributes>
+    <small>View Smaller</small>
+  </button> 
+{{else}}
+ <button type="button" class="image" {{on "click" this.toggleSize}}>
+    <img ...attributes>
+    <small>View Larger</small>
+  <button>
+{{/if}} --}}
+
+{{!-- <button type="button" class="image {{if this.isLarge "large"}}" {{on "click" this.toggleSize}}>
+  <img ...attributes>
+  {{#if this.isLarge}}
+   <small>View Smaller</small>
+    {{else}}
+    <small>View Larger</small>
+    {{/if}}
+</button> --}}
+{{!-- 
+<small>View {{if this.isLarge "Smaller" "Larger"}}</small> --}}
+
+
+{{!-- The expression version of {{if}} takes two arguments. The first argument is the condition. The second argument is the expression that should be evaluated if the condition is true. --}}
+

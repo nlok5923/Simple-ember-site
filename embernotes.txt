@@ -38,3 +38,55 @@ now <linkTo @route="blog_post">dfdf<linkTo>
 route  template will be /blog-post
 template will be blog_post
 
+
+Components :
+Breaking html file into pieces
+
+breaking html into pieces and using part as a Components
+
+to access Components within a folder we use :: example :<ReceivedMessage::avatar>
+
+Component: Jumbo
+
+<div class="jumbo">
+<div class="right tomster"></div>
+{{yield}}
+</div>
+
+no pathing simply using 
+
+{{yield}} this keyword help us to put some content between custom made tags
+
+<Jumbo>
+//content : it is becoz of {{yield}}
+</Jumbo>
+
+testing Component 
+
+Here, we used the generator to generate a component test, also known
+ as a rendering test. These are used to render and test a single 
+ component at a time. This is in contrast to the acceptance tests
+  that we wrote earlier, which have to navigate and render entire
+   pages worth of content
+
+   instead of Visiting url we render component 
+
+{{outlet}} denotes the place where our sites pages should be rendered into
+similar to {{yield}}
+
+
+component name first letter must be capital 
+ 
+ we can use Image component as <Rental::Image>
+ those component like <Image /> call image component 
+
+ Addng behaviuors 
+
+ to add javascript file with <Rental::Image>
+we will run command ember generate-calss rental.image 
+it will create a javascript file with names as image.js
+
+
+
+
+
